@@ -1,4 +1,5 @@
 import os
+
 gabarito = []
 resp = []
 pontos = 0
@@ -7,8 +8,8 @@ def questao1():
     global pontos
     A = "A arquitetura em camadas pode ser considerada uma versão mais aprimorada da estratégia presente na arquitetura monolítica, uma vez que no modelo em camadas cada uma oferece funcionalidades utilizadas apenas pelas camadas superiores. "
     B = "Uma máquina virtual é idêntica ao hardware verdadeiro; cada uma pode executar qualquer SO que seja executado diretamente no hardware básico. Diferentes VM podem executar diferentes SO. "
-    C = "A arquitetura monolítica é a organização mais direta para a concepção de um SO, e a mais organizada e eficiente. Alguns autores a chamam de “estrutura simples”, porque o SO é construído com um conjunto de rotinas que podem ser chamadas umas pelas outras."
-    D = "Em uma arquitetura de microkemel o SO é reestruturado, retirando-se componentes não essenciais do kernel e adicionando-os como programas de nível de sistema e de usuário diminuindo assim o tamanho do kernel."
+    C = "A arquitetura monolítica é a organização mais direta para a concepção de um SO, e a mais organizada e eficiente. Alguns autores a chamam de “estrutura simples”, porque o SO é construído com um conjunto de rotinas que podem ser chamadas umas pelas outras. "
+    D = "Em uma arquitetura de microkemel o SO é reestruturado, retirando-se componentes não essenciais do kernel e adicionando-os como programas de nível de sistema e de usuário diminuindo assim o tamanho do kernel. "
 
     ops = [A,B,C,D]
     rCorreta = C
@@ -49,6 +50,7 @@ def questao2():
     gabarito.append("B")
 
     print("2  O conceito de arquitetura perpassa pelo “[...] projeto geral de um sistema computacional e os inter-relacionamentos lógico e físico entre seus componentes”. Logo, o projeto eficiente de um SO está associado à escolha de uma arquitetura adequada às execuções de seus processos e serviços. Sobre a importância das arquiteturas para o projeto de um SO, assinale a alternativa CORRETA:")
+    
     print("A) "+ ops[0])
     print("B) "+ ops[1])
     print("C) "+ ops[2])
@@ -107,14 +109,14 @@ def questao4():
     global pontos
     A = "Os SO sempre oferecem algum tipo interface de usuário, baseada em gráficos ou em apenas texto, com a função de executar comandos submetidos pelos usuários através de linha de comando, interface batch, interface gráfica de usuário, ou mesmo uma combinação dessas formas."
     B = "Um SO, normalmente, possui seu conceito de sistemas de arquivos baseados em arquivos e diretórios (pastas) físicos, aos quais são submetidas operações de criação, consulta, modificação e exclusão, incluindo a utilização de filtros de pesquisa sobre algumas dessas operações."
-    C = "Uma outra função exercida pelo SO, porém não relacionada ao funcionamento eficiente do sistema, permite a contagem (quantidade e tipo) de recursos iniciados pelos usuários e seus processos. Essa função permite o gerenciamento dos recursos no tocante a sua liberação quando necessária, ou apenas para fins estatísticos, buscando uma melhor configuração e reconfiguração dos recursos do sistema."
+    C = "Uma outra função exercida pelo SO, porém não relacionada ao funcionamento eficiente do sistema, permite a contagem (quantidade e tipo) de recursos iniciados pelos usuários e seus processos. Essa função permite o gerenciamento dos recursos no tocante a sua liberação quando necessária, ou apenas para fins estatísticos, buscando uma melhor configuração e reconfiguração dos recursos do sistema." 
     D = "A alocação de recursos é, sem dúvida, um dos serviços mais essenciais presentes em um SO. O gerenciamento desse serviço permite a distribuição correta de recursos (processador, uso de memória principal e manipulação de arquivos, dispositivos de E/S, entre outros) aos processos dos usuários e do próprio sistema. E se idealizarmos ambientes mais complexos com múltiplos usuários e múltiplos recursos compartilhados, esse gerenciamento toma uma proporção ainda mais complexa e bem mais delicada."
 
     ops = [A,B,C,D]
     rCorreta = D
     gabarito.append("D")
 
-    print("4  Um SO apresenta uma série de funções (serviços) que devem atender tanto às necessidades do usuário quanto permitir aos desenvolvedores programar suas tarefas de maneira mais fácil. Dessa forma, além dessas funções, existem serviços com características bem mais específicas, associados à garantia de bom funcionamento do próprio sistema. Tendo isso em mente, assinale a alternativa CORRETA sobre esses serviços.")
+    print("5  Um SO apresenta uma série de funções (serviços) que devem atender tanto às necessidades do usuário quanto permitir aos desenvolvedores programar suas tarefas de maneira mais fácil. Dessa forma, além dessas funções, existem serviços com características bem mais específicas, associados à garantia de bom funcionamento do próprio sistema. Tendo isso em mente, assinale a alternativa CORRETA sobre esses serviços.")
     print("A) "+ ops[0])
     print("B) "+ ops[1])
     print("C) "+ ops[2])
@@ -132,15 +134,14 @@ def questao4():
     elif r == "D":
         resp.append(r)
         r=D
-        if r == rCorreta:
-            pontos +=2.5
     os.system("cls")
 questao4()
 
+
 print("============GABARITO============")
-for i in range(0,4):
+for i in range(0,5):
     print(gabarito[i])
 print("============SUA PROVA============")
-for i in range(0,4):
+for i in range(0,5):
     print(resp[i])
 print("Sua pontuação foi de: {}".format(pontos))
